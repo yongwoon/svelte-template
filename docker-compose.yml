@@ -5,13 +5,14 @@ services:
     container_name: dev_svelte_template_php
     build: .
     user: "node:node"
+    # command: npm run dev -- --port 8080 --host 0.0.0.0
     environment:
       NODE_ENV: "development"
     volumes:
-      - ./:/usr/src/app
+      - ./app:/usr/src/app
     working_dir: "/usr/src/app"
     ports:
-      - "4200:4200"
+      - "8080:8080"
     tty: true
     networks:
       - dev_svelte_template_network
