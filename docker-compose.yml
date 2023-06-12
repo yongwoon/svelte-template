@@ -12,7 +12,7 @@ services:
       NODE_ENV: "development"
     volumes:
       - ./app:/var/www/app
-      - dev_svelte_template_node_module_volume:/var/www/app/node_modules
+      # - dev_svelte_template_node_module_volume:/var/www/app/node_modules
     working_dir: "/var/www/app"
     ports:
       - "8080:8080"
@@ -20,7 +20,7 @@ services:
     networks:
       - dev_svelte_template_network
 
-volumes:
-  dev_svelte_template_node_module_volume:
+# volumes:
+#   dev_svelte_template_node_module_volume:
 networks:
   dev_svelte_template_network:

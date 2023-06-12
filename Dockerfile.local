@@ -10,4 +10,7 @@ RUN mkdir -p $APP_ROOT/node_modules/ && \
 
 WORKDIR $APP_ROOT
 
+# COPY package.json package-lock.json $APP_ROOT/
+# RUN npm install
+
 CMD ["bash"]
